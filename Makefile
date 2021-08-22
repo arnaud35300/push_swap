@@ -9,6 +9,7 @@ LIBFT		= 	./libft
 
 CC			=	gcc
 CFLAGS		=	-Wall -Wextra -Werror
+LIBFT_INC	=	-I./libft -I./libft/char -I./libft/file -I./libft/int -I./libft/lst -I./libft/mem -I./libft/print -I./libft/str
 
 # [ SRCS ]
 
@@ -37,7 +38,7 @@ $(LIBFT):
 			@$(MAKE) -C $(LIBFT)
 
 $(OBJ)/%.o: $(SRCS)
-			$(CC) $(CFLAGS) -I./includes -I./libft -c $< -o $@
+			$(CC) $(CFLAGS) -I./includes -I./libft $(LIBFT_INC) -c $< -o $@
 clean:
 			@$(RM) $(OBJ)
 			@$(MAKE) clean -C $(LIBFT)
