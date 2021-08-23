@@ -1,11 +1,5 @@
 #include "push_swap.h"
 
-typedef struct	s_stack
-{
-	int				nb;
-	struct s_stack	*next;
-}				t_stack;
-
 typedef struct	s_ps
 {
 	t_stack	*a;

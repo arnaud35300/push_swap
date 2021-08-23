@@ -35,7 +35,7 @@ $(OBJ):
 			@mkdir -p $(OBJ)
 
 $(LIBFT):
-			@$(MAKE) -C $(LIBFT)
+			@$(MAKE) bonus -C $(LIBFT)
 
 $(OBJ)/%.o: $(SRCS)
 			$(CC) $(CFLAGS) -I./includes -I./libft $(LIBFT_INC) -c $< -o $@
