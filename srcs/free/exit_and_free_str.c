@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free.h                                             :+:      :+:    :+:   */
+/*   exit_str_and_free.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arguilla <arguilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/24 03:02:39 by arguilla          #+#    #+#             */
-/*   Updated: 2021/08/25 21:10:33 by arguilla         ###   ########.fr       */
+/*   Created: 2021/08/25 18:22:45 by arguilla          #+#    #+#             */
+/*   Updated: 2021/08/25 18:29:13 by arguilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FREE_H
-# define FREE_H
+#include "push_swap.h"
 
-int	exit_and_free(t_ps *ps, char *msg, int status);
-int	exit_and_free_str(char **s, int status);
-void	free_stack(t_stack *stack);
 
-#endif
+int	exit_and_free_str(char **s, int status)
+{
+	free(*s);
+	return (status);
+}
+

@@ -10,13 +10,16 @@ LIBFT		= 	./libft
 CC				=	gcc
 CFLAGS			=	-Wall -Wextra -Werror -g3 -ggdb
 LIBFT_INC		=	-I./libft -I./libft/char -I./libft/file -I./libft/int -I./libft/lst -I./libft/mem -I./libft/print -I./libft/str
-PUSH_SWAP_INC	=	-I./srcs/parser -I./srcs/free
+PUSH_SWAP_INC	=	-I./srcs/parser -I./srcs/free -I./srcs/store
 # [ SRCS ]
 
 SRCS		=	main.c\
 				parse_args.c\
 				parse_arg.c\
 				exit_and_free.c\
+				exit_and_free_str.c\
+				free_stack.c\
+				store_stack_elem.c\
 
 # [ OBJECTS ] #
 
@@ -25,7 +28,7 @@ OBJS		=	$(addprefix $(OBJ)/, $(SRCS:.c=.o))
 
 # [ PATH ] #
 
-VPATH		=	includes:srcs:libft:srcs/parser:srcs/free
+VPATH		=	includes:srcs:libft:srcs/parser:srcs/free:srcs/store
 
 # [ RULES ] #
 

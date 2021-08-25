@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free.h                                             :+:      :+:    :+:   */
+/*   store_stack_elem.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arguilla <arguilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/24 03:02:39 by arguilla          #+#    #+#             */
-/*   Updated: 2021/08/25 21:10:33 by arguilla         ###   ########.fr       */
+/*   Created: 2021/08/25 19:41:40 by arguilla          #+#    #+#             */
+/*   Updated: 2021/08/25 19:49:29 by arguilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FREE_H
-# define FREE_H
+#include "push_swap.h"
 
-int	exit_and_free(t_ps *ps, char *msg, int status);
-int	exit_and_free_str(char **s, int status);
-void	free_stack(t_stack *stack);
-
-#endif
+t_bool	store_stack_elem(t_stack **stack, int value)
+{
+	t_stack	*new;
+	
+	new = ft_lstnew(value);
+	if (!new)
+		return (FALSE);
+	ft_lstadd_front(stack, new);
+	return (TRUE);
+}

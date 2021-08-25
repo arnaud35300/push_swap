@@ -6,7 +6,7 @@
 /*   By: arguilla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 15:58:20 by arguilla          #+#    #+#             */
-/*   Updated: 2021/08/24 03:18:35 by arguilla         ###   ########.fr       */
+/*   Updated: 2021/08/25 20:52:30 by arguilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,9 @@
 
 # define TRUE 1
 # define FALSE 0
-
+# define MAIN_ERROR 1
+# define MAIN_SUCCES 0
+# define NO_MSG NULL
 /*
 ** Custom types.
 */
@@ -53,5 +55,6 @@ typedef struct	s_ps
 
 # include "parser.h"
 # include "free.h"
+# include "store.h"
 
 #endif

@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free.h                                             :+:      :+:    :+:   */
+/*   store.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arguilla <arguilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/24 03:02:39 by arguilla          #+#    #+#             */
-/*   Updated: 2021/08/25 21:10:33 by arguilla         ###   ########.fr       */
+/*   Created: 2021/08/25 19:40:16 by arguilla          #+#    #+#             */
+/*   Updated: 2021/08/25 19:49:50 by arguilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FREE_H
-# define FREE_H
+#ifndef STORE_H
+# define STORE_H
 
-int	exit_and_free(t_ps *ps, char *msg, int status);
-int	exit_and_free_str(char **s, int status);
-void	free_stack(t_stack *stack);
+t_bool	store_stack_elem(t_stack **stack, int value);
 
 #endif
