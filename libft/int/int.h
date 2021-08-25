@@ -6,7 +6,7 @@
 /*   By: arguilla <arguilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 00:04:47 by arguilla          #+#    #+#             */
-/*   Updated: 2021/08/23 00:26:45 by arguilla         ###   ########.fr       */
+/*   Updated: 2021/08/25 05:28:57 by arguilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,6 @@
 
 int		ft_atoi(const char *str);
 char	*ft_itoa(int n);
+int		ft_strtol(const char *nptr, char **endptr, int base, int *err);
 
 #endif

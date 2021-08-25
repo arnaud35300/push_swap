@@ -6,7 +6,7 @@
 #    By: arguilla <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/26 21:39:55 by arguilla          #+#    #+#              #
-#    Updated: 2021/08/23 01:10:49 by arguilla         ###   ########.fr        #
+#    Updated: 2021/08/25 03:45:50 by arguilla         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,12 +15,14 @@ HEADERS = libft.h
 SRCS 		= ft_strlen.c\
 	  		  ft_toupper.c\
 	  		  ft_tolower.c\
+			  ft_isspace.c\
 	  		  ft_isalpha.c\
 	  		  ft_isdigit.c\
 	  		  ft_isalnum.c\
 	  		  ft_isprint.c\
 	  		  ft_isascii.c\
 	  		  ft_atoi.c\
+			  ft_strtol.c\
 	  		  ft_bzero.c\
 	  		  ft_calloc.c\
 	  		  ft_strchr.c\
@@ -63,7 +65,7 @@ OBJS_BONUS = $(BONUS:.c=.o)
 CC = gcc
 RM = rm -f
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 
 VPATH =	char:file:int:lst:mem:print:str
 
