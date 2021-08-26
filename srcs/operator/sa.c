@@ -6,7 +6,7 @@
 /*   By: arguilla <arguilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/26 02:15:44 by arguilla          #+#    #+#             */
-/*   Updated: 2021/08/26 03:09:18 by arguilla         ###   ########.fr       */
+/*   Updated: 2021/08/26 03:21:10 by arguilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	sa(t_stack **a)
 {
-	t_stack *tmp1;
+	t_stack *tmp;
 
 	if (ft_lstsize(*a) < 2)
 		return ;
-	tmp1 = (*a);
+	tmp = (*a);
 	(*a) = (*a)->next;
-	tmp1->next = (*a)->next; 
-	(*a)->next = tmp1;
+	tmp->next = (*a)->next; 
+	(*a)->next = tmp;
 }

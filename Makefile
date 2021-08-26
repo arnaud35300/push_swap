@@ -21,6 +21,10 @@ SRCS		=	main.c\
 				free_stack.c\
 				store_stack_elem.c\
 				sa.c\
+				sb.c\
+				ss.c\
+				pa.c\
+				pb.c\
 
 # [ OBJECTS ] #
 
