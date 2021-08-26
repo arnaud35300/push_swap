@@ -6,7 +6,7 @@
 /*   By: arguilla <arguilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 19:41:40 by arguilla          #+#    #+#             */
-/*   Updated: 2021/08/25 19:49:29 by arguilla         ###   ########.fr       */
+/*   Updated: 2021/08/26 01:41:53 by arguilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ t_bool	store_stack_elem(t_stack **stack, int value)
 	new = ft_lstnew(value);
 	if (!new)
 		return (FALSE);
-	ft_lstadd_front(stack, new);
+	ft_lstadd_back(stack, new);
 	return (TRUE);
 }

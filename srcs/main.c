@@ -6,11 +6,18 @@
 /*   By: arguilla <arguilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 02:07:45 by arguilla          #+#    #+#             */
-/*   Updated: 2021/08/25 21:06:01 by arguilla         ###   ########.fr       */
+/*   Updated: 2021/08/26 00:40:06 by arguilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+int	print(int n)
+{
+	printf("pile: %d\n", n);
+	return (1);
+}
+
 
 int	main(int ac, char **av)
 {
@@ -21,7 +28,8 @@ int	main(int ac, char **av)
 	ps->b = NULL;
 	if (!ps)
 		return (MAIN_ERROR);
-	if (!(parse_args(&ps, ac, av)))
+	if (!(parse_args(ps, ac, av)))
 		return (exit_and_free(ps, "Error.", MAIN_ERROR));
+	ft_lstiter(ps->a, &print);
 	return (exit_and_free(ps, NO_MSG, MAIN_SUCCES));
 }
