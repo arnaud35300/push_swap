@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sa.c                                               :+:      :+:    :+:   */
+/*   rrr.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arguilla <arguilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/26 02:15:44 by arguilla          #+#    #+#             */
-/*   Updated: 2021/08/26 04:01:33 by arguilla         ###   ########.fr       */
+/*   Created: 2021/08/26 04:40:38 by arguilla          #+#    #+#             */
+/*   Updated: 2021/08/26 04:41:59 by arguilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sa(t_stack **a)
+void	rrr(t_stack **a, t_stack**b)
 {
-	t_stack *tmp;
-
-	if (ft_lstsize(*a) < 2)
-		return ;
-	tmp = (*a);
-	*a = (*a)->next;
-	tmp->next = (*a)->next; 
-	(*a)->next = tmp;
+	rra(a);
+	rrb(b);
 }

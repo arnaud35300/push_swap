@@ -25,6 +25,12 @@ SRCS		=	main.c\
 				ss.c\
 				pa.c\
 				pb.c\
+				ra.c\
+				rb.c\
+				rr.c\
+				rra.c\
+				rrb.c\
+				rrr.c\
 
 # [ OBJECTS ] #
 
