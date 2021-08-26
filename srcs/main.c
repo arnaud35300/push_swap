@@ -6,7 +6,7 @@
 /*   By: arguilla <arguilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 02:07:45 by arguilla          #+#    #+#             */
-/*   Updated: 2021/08/26 00:40:06 by arguilla         ###   ########.fr       */
+/*   Updated: 2021/08/26 02:28:35 by arguilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	print(int n)
 {
-	printf("pile: %d\n", n);
+	printf("|\t\t%d\t\t|\n", n);
 	return (1);
 }
 
@@ -30,6 +30,10 @@ int	main(int ac, char **av)
 		return (MAIN_ERROR);
 	if (!(parse_args(ps, ac, av)))
 		return (exit_and_free(ps, "Error.", MAIN_ERROR));
+	printf("PILE\n");
+	ft_lstiter(ps->a, &print);
+	sa(&(ps->a));
+	printf("PILE\n");
 	ft_lstiter(ps->a, &print);
 	return (exit_and_free(ps, NO_MSG, MAIN_SUCCES));
 }
