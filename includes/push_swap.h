@@ -6,7 +6,7 @@
 /*   By: arguilla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 15:58:20 by arguilla          #+#    #+#             */
-/*   Updated: 2021/08/26 03:18:40 by arguilla         ###   ########.fr       */
+/*   Updated: 2021/08/28 01:03:27 by arguilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,7 @@ typedef struct	s_ps
 # include "free.h"
 # include "store.h"
 # include "operator.h"
+# include "checker.h"
+# include "sort.h"
 
 #endif
