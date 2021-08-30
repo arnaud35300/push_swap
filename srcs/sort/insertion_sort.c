@@ -6,7 +6,7 @@
 /*   By: arguilla <arguilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/28 01:05:34 by arguilla          #+#    #+#             */
-/*   Updated: 2021/08/29 21:19:55 by arguilla         ###   ########.fr       */
+/*   Updated: 2021/08/29 23:32:09 by arguilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -252,6 +252,8 @@ void	top_and_pstack(t_stack **giver, t_stack **receiver, t_stack *elem)
 		else
 			ra(giver);
 	}
+
+
 	pb(giver, receiver);
 }
 
@@ -266,13 +268,16 @@ void	insertion_sort(t_stack **a, t_stack **b)
 		return ;
 	while (*a)
 	{
-		while (chunk_in_a(*a, s))
+		while (!chunk_in_a(*a, s))
 		{
 			s->hold_first = find_hold_first(*a, *b, s);
 			s->hold_second = find_hold_second(*a, *b, s);
 			if (!s->hold_second || nb_act_top(*a, s->hold_first) >= nb_act_top(*a, s->hold_second))
-				top_and_pstack(a, b, s->hold_first);	
+				top_and_pstack(a, b, s->hold_first);
+			else
+				top_and_pstack(a, b, s->hold_second);
 		}
 		s->chunk_id++;
 	}
+	
 }
