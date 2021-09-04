@@ -6,7 +6,7 @@
 /*   By: arguilla <arguilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/28 01:05:34 by arguilla          #+#    #+#             */
-/*   Updated: 2021/08/29 23:32:09 by arguilla         ###   ########.fr       */
+/*   Updated: 2021/09/04 03:59:28 by arguilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -234,34 +234,155 @@ int	nb_act_top(t_stack *stack, t_stack *elem)
 	return (i);
 }
 
-void	top_and_pstack(t_stack **giver, t_stack **receiver, t_stack *elem)
+t_bool	is_smallest(t_stack *stack, t_stack *elem)
+{
+	while (stack)
+	{
+		if (stack->nb < elem->nb)
+			return (FALSE);
+		stack = stack->next;
+	}
+	return (TRUE);
+}
+
+t_bool	is_greatest(t_stack *stack, t_stack *elem)
+{
+	while (stack)
+	{
+		if (stack->nb > elem->nb)
+			return (FALSE);
+		stack = stack->next;
+	}
+	return (TRUE);
+}
+
+t_stack	*smallest_elem(t_stack *stack)
+{
+	t_stack	*elem;
+
+	elem = stack;
+	while (stack)
+	{
+		if (stack->nb < elem->nb)
+			elem = stack;
+		stack = stack->next;
+	}
+	return (elem);
+}
+
+t_stack	*greatest_elem(t_stack *stack)
+{
+	t_stack	*elem;
+
+	elem = stack;
+	while (stack)
+	{
+		if (stack->nb > elem->nb)
+			elem = stack;
+		stack = stack->next;
+	}
+	return (elem);
+}
+
+t_stack *elem_before_elem(t_stack *stack, t_stack *elem)
+{
+	t_stack	*min;
+
+	min = greatest_elem(stack);
+	while (stack)
+	{
+		if (stack->nb > elem->nb && stack->nb > min->nb)
+		//	if (min->nb > stack->nb && min->nb < elem->nb)
+			min = stack;
+		stack = stack->next;
+	}
+	return (min);
+}
+
+
+void	prepare_stack_to_receive(t_stack **stack, t_stack *elem)
+{
+	t_stack	*min;
+	int		reverse;
+
+	if (is_greatest(*stack, elem) || is_smallest(*stack, elem))
+		min = smallest_elem(*stack);
+	else
+		min = elem_before_elem(*stack, elem);
+	reverse = FALSE;
+	if (*stack == min)
+		return;
+	if (get_elem_position(*stack, elem) > (ft_lstsize(*stack) / 2))
+		reverse = TRUE;
+	while (*stack != min)
+		if (reverse)
+			rrb(stack);
+		else
+			rb(stack);
+}
+
+void	top_and_pstack_b(t_stack **a, t_stack **b, t_stack *elem)
 {
 	int		len;
 	int		i;
 	t_bool	reverse;
 
-	len = ft_lstsize(*giver);
-	i = get_elem_position(*giver, elem);
+	len = ft_lstsize(*a);
+	i = get_elem_position(*a, elem);
 	reverse = FALSE;
 	if (i > (len / 2))
 		reverse = TRUE;
-	while (*giver != elem)
+	while (*a != elem)
 	{
 		if (reverse)
-			rra(giver);
+		{
+			rra(a);
+			printf("rra\n");
+		}
 		else
-			ra(giver);
+		{
+			ra(a);
+			printf("ra\n");
+		}
 	}
+	prepare_stack_to_receive(b, elem);
+	pb(a, b);
+	printf("pb\n");
+}
 
+void	top_and_pstack_a(t_stack **a, t_stack **b, t_stack *elem)
+{
+	int		len;
+	int		i;
+	t_bool	reverse;
 
-	pb(giver, receiver);
+	len = ft_lstsize(*b);
+	i = get_elem_position(*b, elem);
+	reverse = FALSE;
+	if (i > (len / 2))
+		reverse = TRUE;
+	while (*b != elem)
+	{
+		if (reverse)
+		{
+			rrb(b);
+			printf("rrb\n");
+		}
+		else
+		{
+			printf("rb\n");
+			rb(b);
+		}
+	}
+	pa(a, b);
+	printf("pa\n");
 }
 
 void	insertion_sort(t_stack **a, t_stack **b)
 {
 	t_sort	*s;	
 	
-	int	nb_chunks = 4;
+	int	nb_chunks = 11;
 
 	s = init_sort_struct(nb_chunks, *a);  
 	if (!s || s->len < 2)
@@ -272,12 +393,18 @@ void	insertion_sort(t_stack **a, t_stack **b)
 		{
 			s->hold_first = find_hold_first(*a, *b, s);
 			s->hold_second = find_hold_second(*a, *b, s);
-			if (!s->hold_second || nb_act_top(*a, s->hold_first) >= nb_act_top(*a, s->hold_second))
-				top_and_pstack(a, b, s->hold_first);
+			if (!s->hold_second || nb_act_top(*a, s->hold_first) < nb_act_top(*a, s->hold_second) ||
+				(nb_act_top(*a, s->hold_first) == nb_act_top(*a, s->hold_second) &&
+				 s->hold_first->nb < s->hold_second->nb))
+				top_and_pstack_b(a, b, s->hold_first);
 			else
-				top_and_pstack(a, b, s->hold_second);
+				top_and_pstack_b(a, b, s->hold_second);
 		}
 		s->chunk_id++;
+	}
+	while (*b)
+	{
+		top_and_pstack_a(a, b, greatest_elem(*b));
 	}
 	
 }
