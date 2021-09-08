@@ -6,7 +6,7 @@
 /*   By: arguilla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/06 21:12:31 by arguilla          #+#    #+#             */
-/*   Updated: 2021/02/16 14:12:05 by arguilla         ###   ########.fr       */
+/*   Updated: 2021/09/08 05:06:03 by arguilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,8 @@ int	get_next_line(int fd, char **line)
 	}
 	*line = ft_substr_g(tab[fd], 0, check_line(tab[fd]));
 	tmp = tab[fd];
-	tab[fd] = ft_substr_g(tab[fd], check_line(tab[fd]) + 1, ft_strlen_g(tab[fd]));
+	tab[fd] = ft_substr_g(tab[fd], check_line(tab[fd]) + 1,
+			ft_strlen_g(tab[fd]));
 	free(tmp);
 	return (negpos(pos, &tab[fd]));
 }

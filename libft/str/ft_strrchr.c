@@ -6,7 +6,7 @@
 /*   By: arguilla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/15 17:00:22 by arguilla          #+#    #+#             */
-/*   Updated: 2021/01/08 13:42:26 by arguilla         ###   ########.fr       */
+/*   Updated: 2021/09/08 05:14:04 by arguilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char *last_match;
+	char	*last_match;
 
 	last_match = NULL;
 	while (*s)

@@ -6,13 +6,15 @@
 /*   By: arguilla <arguilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/26 03:51:32 by arguilla          #+#    #+#             */
-/*   Updated: 2021/09/04 03:51:53 by arguilla         ###   ########.fr       */
+/*   Updated: 2021/09/08 04:12:48 by arguilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	pa(t_stack **a, t_stack **b)
+void	pa(t_stack **a, t_stack **b, t_bool display)
 {
-	pb(b, a);
+	pb(b, a, FALSE);
+	if (display)
+		ft_putstr_fd("pa\n", 1);
 }

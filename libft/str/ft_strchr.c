@@ -6,7 +6,7 @@
 /*   By: arguilla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/14 00:43:13 by arguilla          #+#    #+#             */
-/*   Updated: 2021/01/08 12:59:04 by arguilla         ###   ########.fr       */
+/*   Updated: 2021/09/08 05:11:19 by arguilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ char	*ft_strchr(const char *s, int c)
 	while (*s)
 	{
 		if (*s == c)
-			return (char *)(s);
+			return ((char *)(s));
 		s++;
 	}
 	if (c == '\0')
-		return (char *)(s);
+		return ((char *)(s));
 	return (NULL);
 }

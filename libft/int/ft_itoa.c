@@ -6,7 +6,7 @@
 /*   By: arguilla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 15:18:58 by arguilla          #+#    #+#             */
-/*   Updated: 2021/01/08 09:37:27 by arguilla         ###   ########.fr       */
+/*   Updated: 2021/09/08 05:02:24 by arguilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ static int	get_len(int n)
 ** if malloc fails.
 */
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*r;
 	int		len;

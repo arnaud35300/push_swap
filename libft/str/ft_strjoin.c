@@ -6,7 +6,7 @@
 /*   By: arguilla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 21:18:42 by arguilla          #+#    #+#             */
-/*   Updated: 2021/01/08 13:12:47 by arguilla         ###   ########.fr       */
+/*   Updated: 2021/09/08 05:11:51 by arguilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static void	assign(char *r, char const *s, size_t *i)
 ** @return	the string resulting from the concatenation of s1 and s2.
 */
 
-char		*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*r;
 	size_t	i;

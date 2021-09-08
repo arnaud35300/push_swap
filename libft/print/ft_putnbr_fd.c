@@ -6,7 +6,7 @@
 /*   By: arguilla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 11:11:19 by arguilla          #+#    #+#             */
-/*   Updated: 2021/01/08 11:19:55 by arguilla         ###   ########.fr       */
+/*   Updated: 2021/09/08 05:06:41 by arguilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned int nb;
+	unsigned int	nb;
 
 	nb = (unsigned int)n;
 	if (n < 0)

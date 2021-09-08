@@ -6,7 +6,7 @@
 /*   By: arguilla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 15:58:20 by arguilla          #+#    #+#             */
-/*   Updated: 2021/08/28 01:03:27 by arguilla         ###   ########.fr       */
+/*   Updated: 2021/09/08 05:27:22 by arguilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,30 +24,7 @@
 # include <stdint.h>
 # include <stdio.h>
 
-/*
- * Defines
-*/
-
-# define TRUE 1
-# define FALSE 0
-# define MAIN_ERROR 1
-# define MAIN_SUCCES 0
-# define NO_MSG NULL
-/*
-** Custom types.
-*/
-
-typedef int	t_bool;
-
-/*
- * Push swap structures.
-*/
-
-typedef struct	s_ps
-{
-	t_stack	*a;
-	t_stack	*b;
-}				t_ps;
+# include "data.h"
 
 /*
 ** Functions prototypes.
@@ -59,5 +36,7 @@ typedef struct	s_ps
 # include "operator.h"
 # include "checker.h"
 # include "sort.h"
+# include "chunk.h"
+# include "stack.h"
 
 #endif

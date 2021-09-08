@@ -6,7 +6,7 @@
 /*   By: arguilla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/16 01:13:55 by arguilla          #+#    #+#             */
-/*   Updated: 2021/01/08 11:11:50 by arguilla         ###   ########.fr       */
+/*   Updated: 2021/09/08 05:07:42 by arguilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	char *r;
+	char	*r;
 
 	r = b;
 	while (len)

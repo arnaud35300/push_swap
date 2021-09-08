@@ -6,7 +6,7 @@
 /*   By: arguilla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 21:47:28 by arguilla          #+#    #+#             */
-/*   Updated: 2021/01/14 12:11:16 by arguilla         ###   ########.fr       */
+/*   Updated: 2021/09/08 05:15:03 by arguilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	is_set(const char c, const char *set)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (set[i])
@@ -37,7 +37,7 @@ static int	is_set(const char c, const char *set)
 ** at the end.
 */
 
-char		*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char		*r;
 	size_t		i;
@@ -55,7 +55,8 @@ char		*ft_strtrim(char const *s1, char const *set)
 		len--;
 	}
 	len = ft_strlen(s1) - i;
-	if (!(r = malloc(sizeof(char) * (len + 1))))
+	r = malloc(sizeof(char) * (len + 1));
+	if (!r)
 		return (NULL);
 	i = -1;
 	while (++i < len)

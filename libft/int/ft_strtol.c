@@ -6,7 +6,7 @@
 /*   By: arguilla <arguilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 03:33:53 by arguilla          #+#    #+#             */
-/*   Updated: 2021/08/25 05:31:26 by arguilla         ###   ########.fr       */
+/*   Updated: 2021/09/07 01:26:40 by arguilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 
 static void	skip_spaces(const char **s)
 {
-	while (ft_isspace(**s))
+	while (**s == ' ')
 		(*s)++;
 }
 

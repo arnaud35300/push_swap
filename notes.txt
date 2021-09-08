@@ -1,5 +1,0 @@
-radix sort
-pour 2,3 nombres, traiter manuellement
-si aucun parametre push swap fait rien, pas de msg d'erreur
-gerer gestion espace ft_strtol
-

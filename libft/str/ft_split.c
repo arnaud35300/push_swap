@@ -6,7 +6,7 @@
 /*   By: arguilla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 09:15:30 by arguilla          #+#    #+#             */
-/*   Updated: 2021/08/23 00:34:33 by arguilla         ###   ########.fr       */
+/*   Updated: 2021/09/08 05:10:40 by arguilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static int	is_charset(char c, char charset)
 static int	get_tab_len(char const *s, char c)
 {
 	int	i;
-	int count;
+	int	count;
 
 	i = 1;
 	count = 0;

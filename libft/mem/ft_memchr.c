@@ -6,7 +6,7 @@
 /*   By: arguilla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 10:50:12 by arguilla          #+#    #+#             */
-/*   Updated: 2021/01/29 07:47:45 by arguilla         ###   ########.fr       */
+/*   Updated: 2021/09/08 05:09:41 by arguilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	i = 0;
 	charset = (unsigned char)c;
-	compare = (unsigned char*)s;
+	compare = (unsigned char *)s;
 	while (i < n)
 	{
 		if (charset == compare[i])

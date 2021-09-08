@@ -6,7 +6,7 @@
 /*   By: arguilla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/06 19:30:42 by arguilla          #+#    #+#             */
-/*   Updated: 2021/08/23 01:19:05 by arguilla         ###   ########.fr       */
+/*   Updated: 2021/09/08 05:05:26 by arguilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 
 size_t	ft_strlen_g(const char *s)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (s && s[i])
@@ -39,9 +39,9 @@ size_t	ft_strlen_g(const char *s)
 ** is not in str.
 */
 
-int		check_line(char *str)
+int	check_line(char *str)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	if (!str)

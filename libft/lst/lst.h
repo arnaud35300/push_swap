@@ -6,14 +6,14 @@
 /*   By: arguilla <arguilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 00:04:47 by arguilla          #+#    #+#             */
-/*   Updated: 2021/08/23 23:51:03 by arguilla         ###   ########.fr       */
+/*   Updated: 2021/09/08 05:03:37 by arguilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LST_H
 # define LST_H
 
-typedef struct	s_stack
+typedef struct s_stack
 {
 	int				nb;
 	struct s_stack	*next;

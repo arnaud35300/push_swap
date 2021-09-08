@@ -6,13 +6,15 @@
 /*   By: arguilla <arguilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/26 04:10:56 by arguilla          #+#    #+#             */
-/*   Updated: 2021/08/26 04:11:22 by arguilla         ###   ########.fr       */
+/*   Updated: 2021/09/08 04:13:46 by arguilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	rb(t_stack **b)
+void	rb(t_stack **b, t_bool display)
 {
-	ra(b);
+	ra(b, FALSE);
+	if (display)
+		ft_putstr_fd("rb\n", 1);
 }

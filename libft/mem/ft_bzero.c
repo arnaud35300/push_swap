@@ -6,7 +6,7 @@
 /*   By: arguilla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/13 23:41:05 by arguilla          #+#    #+#             */
-/*   Updated: 2021/01/08 08:51:32 by arguilla         ###   ########.fr       */
+/*   Updated: 2021/09/08 05:09:08 by arguilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	ft_bzero(void *s, size_t n)
 	i = 0;
 	if (n > 0)
 	{
-		buffer = (unsigned char*)s;
+		buffer = (unsigned char *) s;
 		while (i < n)
 		{
 			buffer[i] = 0;

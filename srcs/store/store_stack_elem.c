@@ -6,7 +6,7 @@
 /*   By: arguilla <arguilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 19:41:40 by arguilla          #+#    #+#             */
-/*   Updated: 2021/08/26 01:41:53 by arguilla         ###   ########.fr       */
+/*   Updated: 2021/09/08 05:00:32 by arguilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_bool	store_stack_elem(t_stack **stack, int value)
 {
 	t_stack	*new;
-	
+
 	new = ft_lstnew(value);
 	if (!new)
 		return (FALSE);

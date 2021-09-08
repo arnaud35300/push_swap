@@ -6,7 +6,7 @@
 /*   By: arguilla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/16 01:53:14 by arguilla          #+#    #+#             */
-/*   Updated: 2021/01/08 11:00:22 by arguilla         ###   ########.fr       */
+/*   Updated: 2021/09/08 05:07:29 by arguilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	char *r;
+	char	*r;
 
 	r = dest;
 	while (n)

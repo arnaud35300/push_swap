@@ -6,7 +6,7 @@
 /*   By: arguilla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/16 00:44:56 by arguilla          #+#    #+#             */
-/*   Updated: 2021/01/08 13:22:08 by arguilla         ###   ########.fr       */
+/*   Updated: 2021/09/08 05:12:36 by arguilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t src_len;
+	size_t	src_len;
 
 	src_len = ft_strlen(src);
 	if (!dst || !src)
